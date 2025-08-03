@@ -205,9 +205,11 @@ module.exports = {
     localeConfigs: {
       en: {
         label: 'English',
+        htmlLang: 'en-GB',
       },
       de: {
         label: 'Deutsch',
+        htmlLang: 'de-DE',
       },
     },
   },
