@@ -33,7 +33,16 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      de: {
+        label: 'Deutsch',
+      },
+    },
+
   },
 
   presets: [
@@ -164,7 +173,7 @@ export default config;
 
 module.exports = {
   title: 's3tupw1zard\'s Linux Docs',
-  tagline: 'Just some docs',
+  tagline: 'Just some Linux docs',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -176,7 +185,7 @@ module.exports = {
   url: 'https://s3tupw1zard.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs',
+  baseUrl: '/linux-server-guide',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -192,9 +201,16 @@ module.exports = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      de: {
+        label: 'Deutsch',
+      },
+    },
   },
-
   presets: [
     [
       'classic',
@@ -204,7 +220,7 @@ module.exports = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/s3tupw1zard/linux-server-guide/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -215,7 +231,7 @@ module.exports = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/s3tupw1zard/linux-server-guide/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -238,7 +254,7 @@ module.exports = {
     navbar: {
       title: 's3tupw1zard\'s Linux Docs',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Docusaurus Site Logo', // TODO: Own logo
         src: 'img/logo.svg',
       },
       items: [
@@ -250,10 +266,14 @@ module.exports = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/s3tupw1zard/linux-server-guide',
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        }
       ],
     },
     footer: {
